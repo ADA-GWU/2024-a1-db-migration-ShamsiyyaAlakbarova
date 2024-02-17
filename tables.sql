@@ -25,5 +25,5 @@ INSERT INTO INTERESTS (STUDENT_ID, INTEREST) VALUES
     (1, 'Chemistry'),
     (3, 'Chess');
 	
-	Select * from STUDENTS;
-	Select * from INTERESTS;
+	--Select * from STUDENTS; for testing
+	--Select * from INTERESTS; for testing
