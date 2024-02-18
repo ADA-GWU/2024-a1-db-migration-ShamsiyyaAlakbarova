@@ -79,5 +79,5 @@ select * from STUDENTS;<br><br>
 Firstly we renamed column ST_ID to STUDENT_ID in STUDENTS table.<br>
 Then we changed the length of STUDENTS.ST_NAME and STUDENTS.ST_LAST from 20 to 30.<br>
 After, we renamed column INTEREST to INTERESTS in INTERESTS table.<br>
-For changing the type to array of strings we created temporary table TEMP_INTERESTS.Then we grouped the rows by student_id (1,2,3), aggregates the INTERESTS column values into a JSON array. To have commas and double quotes we used STRING_AGG statement. Also we used order by student_id, to place IDs in sequential order (from 1 to 3).<br>
+For changing the type to array of strings we created temporary table TEMP_INTERESTS. Then we grouped the rows by student_id (1,2,3), aggregated the INTERESTS column values into a JSON array. To have commas and double quotes we used STRING_AGG statement. Also we used order by student_id, to place IDs in sequential order (from 1 to 3). At the end we dropped the original INTERESTS table, and renamed our temporary table to INTERESTS (recreated the table). To check, if there are updates in our table, run last two lines of script.<br>
 </p>
