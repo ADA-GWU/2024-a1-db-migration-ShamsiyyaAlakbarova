@@ -42,10 +42,11 @@ INSERT INTO INTERESTS (STUDENT_ID, INTEREST) VALUES <br>
     (1, 'Chemistry'),<br>
     (3, 'Chess');<br>
 <br>
-In assignment we have to tables, STUDENTS and INTERESTS. This script creates these tables, and inserts values into the tables. Select this script and run it by pressing run button or F5 key. To check if tables are created, run these commands: Select * from STUDENTS; and Select * from INTERESTS;<br>
-Step 2. Now we have two tables in our HW1 database. We have to Rename the STUDENTS.ST_ID to STUDENTS.STUDENT_ID.<br> 
-Change the length of STUDENTS.ST_NAME and STUDENTS.ST_LAST from 20 to 30.<br>
- Change the name of the INTERESTS.INTEREST to INTERESTS and its type to array of strings.<br>
+In assignment we have two tables, <b>STUDENTS</b> and <b>INTERESTS</b>. This script creates these tables, and inserts values into the tables. Select this script and run it by pressing run button or F5 key. To check if tables are created, run these commands: <b>Select * from STUDENTS;</b> and <b>Select * from INTERESTS;</b><br>
+Step 2. Now we have two tables in our HW1 database. We have to:<br> 
+1. Rename the STUDENTS.ST_ID to STUDENTS.STUDENT_ID.<br> 
+2. Change the length of STUDENTS.ST_NAME and STUDENTS.ST_LAST from 20 to 30.<br>
+ 3. Change the name of the INTERESTS.INTEREST to INTERESTS and its type to array of strings.<br>
  Open "migration" file. You will see this script there:<br>
  ALTER TABLE STUDENTS RENAME COLUMN ST_ID TO STUDENT_ID;<br>
 ALTER TABLE STUDENTS ALTER COLUMN ST_NAME TYPE VARCHAR(30);<br>
