@@ -46,8 +46,9 @@ In assignment we have two tables, <b>STUDENTS</b> and <b>INTERESTS</b>. This scr
 Step 2. Now we have two tables in our HW1 database. We have to:<br> 
 1. Rename the STUDENTS.ST_ID to STUDENTS.STUDENT_ID.<br> 
 2. Change the length of STUDENTS.ST_NAME and STUDENTS.ST_LAST from 20 to 30.<br>
- 3. Change the name of the INTERESTS.INTEREST to INTERESTS and its type to array of strings.<br>
- Open "migration" file. You will see this script there:<br>
+ 3. Change the name of the INTERESTS.INTEREST to INTERESTS and its type to array of strings.<br><br>
+ Open "migration" file. You will see this script there:<br><br>
+
  ALTER TABLE STUDENTS RENAME COLUMN ST_ID TO STUDENT_ID;<br>
 ALTER TABLE STUDENTS ALTER COLUMN ST_NAME TYPE VARCHAR(30);<br>
 ALTER TABLE STUDENTS ALTER COLUMN ST_LAST TYPE VARCHAR(30);<br><br>
@@ -73,5 +74,10 @@ RENAME TO INTERESTS;<br><br>
 
 
 Select * from INTERESTS;<br>
-select * from STUDENTS;<br>
+select * from STUDENTS;<br><br>
+
+Firstly we renamed column ST_ID to STUDENT_ID in STUDENTS table.<br>
+Then we changed the length of STUDENTS.ST_NAME and STUDENTS.ST_LAST from 20 to 30.<br>
+After, we renamed column INTEREST to INTERESTS in INTERESTS table.<br>
+For changing the type to array of strings we created temporary table TEMP_INTERESTS.Then we grouped the rows by student_id (1,2,3), aggregates the INTERESTS column values into a JSON array. To have commas and double quotes we used STRING_AGG statement. Also we used order by student_id, to place IDs in sequential order (from 1 to 3).<br>
 </p>
