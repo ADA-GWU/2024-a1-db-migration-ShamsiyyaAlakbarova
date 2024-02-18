@@ -5,10 +5,22 @@ ALTER TABLE STUDENTS ALTER COLUMN ST_LAST TYPE VARCHAR(20);
 
 
 ALTER TABLE INTERESTS RENAME COLUMN INTERESTS TO INTEREST;
-/*ALTER TABLE INTERESTS ALTER COLUMN INTEREST TYPE VARCHAR(20);
 
--- Rollback the data migration
-UPDATE INTERESTS SET INTEREST = INTEREST[1];
 
--- Drop the intermediate column
-ALTER TABLE INTERESTS DROP COLUMN INTEREST;*/
+DELETE FROM INTERESTS;
+
+-- Reinsert the original data
+INSERT INTO INTERESTS (STUDENT_ID, INTEREST) VALUES 
+    (1, 'Tennis'),
+    (1, 'Literature'),
+    (2, 'Math'),
+    (2, 'Tennis'),
+    (3, 'Math'),
+    (3, 'Music'),
+    (2, 'Football'),
+    (1, 'Chemistry'),
+    (3, 'Chess');
+
+
+SELECT * FROM STUDENTS;
+SELECT * FROM INTERESTS;
