@@ -79,5 +79,30 @@ select * from STUDENTS;<br><br>
 Firstly we renamed column ST_ID to STUDENT_ID in STUDENTS table.<br>
 Then we changed the length of STUDENTS.ST_NAME and STUDENTS.ST_LAST from 20 to 30.<br>
 After, we renamed column INTEREST to INTERESTS in INTERESTS table.<br>
-For changing the type to array of strings we created temporary table TEMP_INTERESTS. Then we grouped the rows by student_id (1,2,3), aggregated the INTERESTS column values into a JSON array. To have commas and double quotes we used STRING_AGG statement. Also we used order by student_id, to place IDs in sequential order (from 1 to 3). At the end we dropped the original INTERESTS table, and renamed our temporary table to INTERESTS (recreated the table). To check, if there are updates in our table, run last two lines of script.<br>
+For changing the type to array of strings we created temporary table TEMP_INTERESTS. Then we grouped the rows by student_id (1,2,3), aggregated the INTERESTS column values into a JSON array. To have commas and double quotes we used STRING_AGG statement. Also we used order by student_id, to place IDs in sequential order (from 1 to 3). At the end we dropped the original INTERESTS table, and renamed our temporary table to INTERESTS (recreated the table). To check, if there are updates in our tables, run last two lines of script (but not at the same time).<br><br>
+We did our changes to the tables. But it also should be possible to roll back the migration as well. For this open "rollback" file. There, you will see this script:<br>
+ALTER TABLE STUDENTS RENAME COLUMN STUDENT_ID TO ST_ID;<br>
+ALTER TABLE STUDENTS ALTER COLUMN ST_NAME TYPE VARCHAR(20);<br>
+ALTER TABLE STUDENTS ALTER COLUMN ST_LAST TYPE VARCHAR(20);<br><br>
+
+ALTER TABLE INTERESTS RENAME COLUMN INTERESTS TO INTEREST;<br><br>
+
+
+DELETE FROM INTERESTS;<br>
+--Reinsert the initial data<br>
+INSERT INTO INTERESTS (STUDENT_ID, INTEREST) VALUES<br> 
+    (1, 'Tennis'),<br>
+    (1, 'Literature'),<br>
+    (2, 'Math'),<br>
+    (2, 'Tennis'),<br>
+    (3, 'Math'),<br>
+    (3, 'Music'),<br>
+    (2, 'Football'),<br>
+    (1, 'Chemistry'),<br>
+    (3, 'Chess');<br><br>
+
+
+SELECT * FROM STUDENTS;<br>
+SELECT * FROM INTERESTS;<br>
+
 </p>
