@@ -105,6 +105,6 @@ INSERT INTO INTERESTS (STUDENT_ID, INTEREST) VALUES<br>
 SELECT * FROM STUDENTS;<br>
 SELECT * FROM INTERESTS;<br><br>
 
-We renaming back  STUDENT_ID to ST_ID in STUDENTS table. Then changing length of name and lastname back to 20. Renaming column INTERESTS to INTEREST in INTERESTS table. Then, we are deleting all data from INTERESTS table, and reinsert our initial data into it. 
+We renaming back  STUDENT_ID to ST_ID in STUDENTS table. Then changing length of name and lastname back to 20. Renaming column INTERESTS to INTEREST in INTERESTS table. Then, we are deleting all data from INTERESTS table, and reinsert our initial data into it. To check if our tables are in their initial form, run last two lines of script. <br>To check Students table, run this =>  SELECT * FROM STUDENTS;<br>To check Interests table, run this =>  SELECT * FROM INTERESTS;
 
 </p>
