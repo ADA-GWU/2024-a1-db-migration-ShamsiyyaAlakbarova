@@ -15,31 +15,31 @@ Set up is DONE!<br></p>
 
 <h2>3.Run the Scripts.</h2>
 <p>Step 1. First, you should open "tables" file. There, you will see this script:<br>
-CREATE TABLE STUDENTS (
-    ST_ID INT PRIMARY KEY,
-    ST_NAME VARCHAR(20),
-    ST_LAST VARCHAR(20)
-);
-
-INSERT INTO STUDENTS (ST_ID, ST_NAME, ST_LAST) VALUES 
-    (1, 'Konul', 'Gurbanova'),
-    (2, 'Shahnur', 'Isgandarli'),
-    (3, 'Natavan', 'Mammadova');
-
-CREATE TABLE INTERESTS (
-    STUDENT_ID INT,
-    INTEREST VARCHAR(20)
-);
-
-INSERT INTO INTERESTS (STUDENT_ID, INTEREST) VALUES 
-    (1, 'Tennis'),
-    (1, 'Literature'),
-    (2, 'Math'),
-    (2, 'Tennis'),
-    (3, 'Math'),
-    (3, 'Music'),
-    (2, 'Football'),
-    (1, 'Chemistry'),
-    (3, 'Chess');
-
+CREATE TABLE STUDENTS (<br>
+    ST_ID INT PRIMARY KEY,<br>
+    ST_NAME VARCHAR(20),<br>
+    ST_LAST VARCHAR(20)<br>
+);<br>
+<br>
+INSERT INTO STUDENTS (ST_ID, ST_NAME, ST_LAST) VALUES <br>
+    (1, 'Konul', 'Gurbanova'),<br>
+    (2, 'Shahnur', 'Isgandarli'),<br>
+    (3, 'Natavan', 'Mammadova');<br>
+<br>
+CREATE TABLE INTERESTS (<br>
+    STUDENT_ID INT,<br>
+    INTEREST VARCHAR(20)<br>
+);<br>
+<br>
+INSERT INTO INTERESTS (STUDENT_ID, INTEREST) VALUES <br>
+    (1, 'Tennis'),<br>
+    (1, 'Literature'),<br>
+    (2, 'Math'),<br>
+    (2, 'Tennis'),<br>
+    (3, 'Math'),<br>
+    (3, 'Music'),<br>
+    (2, 'Football'),<br>
+    (1, 'Chemistry'),<br>
+    (3, 'Chess');<br>
+<br>
 </p>
