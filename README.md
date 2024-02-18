@@ -42,7 +42,7 @@ INSERT INTO INTERESTS (STUDENT_ID, INTEREST) VALUES <br>
     (1, 'Chemistry'),<br>
     (3, 'Chess');<br>
 <br>
-In assignment we have two tables, <b>STUDENTS</b> and <b>INTERESTS</b>. This script creates these tables, and inserts values into the tables. Select this script and run it by pressing run button or F5 key. To check if tables are created, run these commands: <b>Select * from STUDENTS;</b> and <b>Select * from INTERESTS;</b><br>
+In assignment we have two tables that we will work on, <b>STUDENTS</b> and <b>INTERESTS</b>. This script creates these tables, and inserts values into the tables. Select this script and run it by pressing run button or F5 key. To check if tables are created, run these commands: <b>Select * from STUDENTS;</b> and <b>Select * from INTERESTS;</b><br>
 Step 2. Now we have two tables in our HW1 database. We have to:<br> 
 1. Rename the STUDENTS.ST_ID to STUDENTS.STUDENT_ID.<br> 
 2. Change the length of STUDENTS.ST_NAME and STUDENTS.ST_LAST from 20 to 30.<br>
@@ -103,6 +103,8 @@ INSERT INTO INTERESTS (STUDENT_ID, INTEREST) VALUES<br>
 
 
 SELECT * FROM STUDENTS;<br>
-SELECT * FROM INTERESTS;<br>
+SELECT * FROM INTERESTS;<br><br>
+
+We renaming back  STUDENT_ID to ST_ID in STUDENTS table. Then changing length of name and lastname back to 20. Renaming column INTERESTS to INTEREST in INTERESTS table. Then, we are deleting all data from INTERESTS table, and reinsert our initial data into it. 
 
 </p>
